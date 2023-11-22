@@ -7,7 +7,12 @@ import Link from 'next/link';
 const name = 'Kendra Bryant';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+interface HomeProps {
+    children?: React.ReactNode
+    home?: any
+}
+
+export default function Layout({ children, home }: HomeProps) {
     return (
         <div className={styles.container}>
             <Head>
